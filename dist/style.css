@@ -3,15 +3,15 @@
   src: url(images/Monoton-Regular.ttf);
 }
 
-canvas {
+#bg {
   position: fixed;
   top: 0;
   left: 0;
 }
 
-main{
+#main{
   position: absolute;
-  overflow: auto;
+  overflow: auto !important;
 }
 
 blockquote{
