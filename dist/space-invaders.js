@@ -169,7 +169,7 @@ cameraMove();
 
 function animate() {
   requestAnimationFrame(animate);
-  console.log(controls.update());
+  controls.update();
   renderer.render(scene, camera);
 }
 
