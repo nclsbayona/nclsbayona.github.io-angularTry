@@ -1,0 +1,16 @@
+name: Publish Build
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/45 * * * *"
+
+jobs:
+  build:
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+        - name: Publish App
+          uses: nclsbayona/deploy-angular_action-@master
+          env:
+            LINK: https://nclsbayona.github.io
+            NAME: nclsbayona.github.io
