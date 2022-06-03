@@ -1,0 +1,44 @@
+<ion-toolbar color="dark">
+    <ion-buttons slot="secondary">
+        <ion-button>
+            <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+        </ion-button>
+        <ion-button>
+            <ion-ripple-effect></ion-ripple-effect>
+            <ion-icon slot="icon-only" name="search"></ion-icon>
+        </ion-button>
+        <ion-button color="light" background="blue" id="side-button">Menu</ion-button>
+        <ion-popover [dismissOnSelect]="true" trigger="side-button" side="top" alignment="start">
+            <ng-template>
+                <ion-content>
+                    <ion-list>
+                        <ion-item [button]="true" [detail]="true">
+                                <ion-label [routerLink]="['activity']">Go to Recent Activity ...</ion-label>
+                        </ion-item>
+                        <ion-item [button]="true" [detail]="true">
+                            <ion-label [routerLink]="['home']">Go to Home ...</ion-label>
+                        </ion-item>
+                        <ion-item [button]="true" [detail]="true">
+                            <ion-label [routerLink]="['contact']">Reach me out ...</ion-label>
+                        </ion-item>
+
+                        <!--ion-popover trigger="nested-trigger" [dismissOnSelect]="true" side="end">
+                          <ng-template>
+                            <ion-content>
+                              <ion-item [button]="true">
+                                <ion-label>Nested Option</ion-label>
+                              </ion-item>
+                            </ion-content>
+                          </ng-template>
+                        </ion-popover-->
+                    </ion-list>
+                </ion-content>
+            </ng-template>
+        </ion-popover>
+
+        <ion-button color="danger">
+            <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+    <ion-title>{{title}}</ion-title>
+</ion-toolbar>

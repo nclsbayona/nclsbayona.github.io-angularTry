@@ -4,10 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IonicModule } from '@ionic/angular';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RecentActivityComponent } from './recent-activity/recent-activity.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    RecentActivityComponent,
   ],
   imports: [
     BrowserModule,

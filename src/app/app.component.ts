@@ -7,10 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'nclsbayona.github.io';
-  clickedStar(){
-    console.log(1)
-  }
-  clickedSearch(){
-    console.log(2)
-  }
 }
