@@ -17,7 +17,7 @@ jobs:
     steps:
         - uses: actions/checkout@v2
         - name: Build App
-          run: npm install && npm run build && cp dist/nclsbayona.github.io/index.html dist/nclsbayona.github.io/404.html
+          run: npm install && npm run build --configuration=production && cp dist/nclsbayona.github.io/index.html dist/nclsbayona.github.io/404.html
         - name: Deploy to GH-Pages
           uses: JamesIves/github-pages-deploy-action@v4.3.3
           with:
