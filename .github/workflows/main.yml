@@ -27,3 +27,5 @@ jobs:
         with:
     # least days the runs have to be old to get purged
           days-old: 2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
