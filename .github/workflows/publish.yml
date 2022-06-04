@@ -9,6 +9,7 @@ jobs:
     name: Publish
     runs-on: ubuntu-latest
     steps:
+        - uses: actions/checkout@v2
         - name: Publish App
           uses: nclsbayona/deploy-angular_action-@master
           env:
