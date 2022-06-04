@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RecentActivityGithubComponent } from './recent-activity-github/recent-activity-github.component';
@@ -7,6 +8,9 @@ import { RecentActivityComponent } from './recent-activity/recent-activity.compo
 import { TimelineComponent } from './timeline/timeline.component';
 
 const routes: Routes = [
+  {
+    title: 'Contact me', path: "contact", component: ContactComponent
+  },
   {
     title: 'My history', path: "timeline", component: TimelineComponent
   },

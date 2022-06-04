@@ -10,7 +10,12 @@ export class NavbarComponent implements OnInit {
 
   @Input()
   title!: string;
-  constructor(private controller: MenuController) {}
+
+  isPopoverOpen: boolean;
+
+  constructor(private controller: MenuController) {
+    this.isPopoverOpen = false;
+  }
 
   ngOnInit(): void {
   }

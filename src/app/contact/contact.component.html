@@ -1,0 +1,35 @@
+<ion-content color="dark" class="ion-padding">
+    <h2>
+        Send me an email
+    </h2>
+    <form id="recaptcha-form" action="https://formspree.io/f/xknyewjj" method="POST">
+        <ion-item class="ion-padding">
+            <ion-label position="floating">Enter your full name</ion-label>
+            <ion-input type="text" name="Name"></ion-input>
+        </ion-item>
+        <ion-item class="ion-padding">
+            <ion-label position="floating">Enter your email</ion-label>
+            <ion-input required type="text" name="Email"></ion-input>
+        </ion-item>
+        <ion-item class="ion-padding">
+            <ion-label position="floating">Enter your message</ion-label>
+            <ion-textarea required name="Message"></ion-textarea>
+        </ion-item>
+        <div class="g-recaptcha" data-sitekey="6LduAEUgAAAAAG8c_8fPelv4DmhiVAU-nOqtLgI6">
+        </div>
+        <ion-button id="submit" class="ion-padding button button-full button-positive" expand="block" type="submit" name="submit">
+            Send
+        </ion-button>
+    </form>
+    <ion-button class="ion-padding" onclick="scrollToTop()" expand="block" fill="outline">Scroll To Top</ion-button>
+</ion-content>
+<script>
+    $(document).on("click", "#submit", ()=>{
+        let response=grecaptcha.getResponse();
+        if (response.length === 0) {
+            alert("Please verify that you are not a robot");
+            return false;
+        }
+        alert(response);
+    });
+</script>

@@ -2,13 +2,52 @@
     (ionScroll)="logScrolling($event)" (ionScrollEnd)="logScrollEnd()">
     <ion-item-divider color="tertiary" mode="ios">
         <ion-label>
+            A quick description of me
+        </ion-label>
+    </ion-item-divider>
+    <ion-card color="dark" class="ion-padding">
+        <ion-card-header>
+            <ion-card-subtitle>
+                <ion-text color="primary">
+                    I'm a systems engineering student passionate about software development and the use of technologies
+                    to help people.
+                </ion-text>
+            </ion-card-subtitle>
+            <ion-card-title>
+                <h1>nclsbayona</h1>
+                <img src="../../assets/nclsbayona.png" />
+            </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            <ion-list>
+                <ion-item color="dark">
+                    <ion-label>Pokémon Yellow</ion-label>
+                </ion-item>
+                <ion-item color="dark">
+                    <ion-label>Mega Man X</ion-label>
+                </ion-item>
+                <ion-item color="dark">
+                    <ion-label>The Legend of Zelda</ion-label>
+                </ion-item>
+                <ion-item color="dark">
+                    <ion-label>Pac-Man</ion-label>
+                </ion-item>
+                <ion-item color="dark">
+                    <ion-label>Super Mario World</ion-label>
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-card>
+    <ion-item-divider color="tertiary" mode="ios">
+        <ion-label>
             Some facts about me
         </ion-label>
     </ion-item-divider>
-    <swiper [spaceBetween]="30" [slidesPerView]="'auto'" [centeredSlides]="true" [effect]="'cards'">
+    <swiper [loop]="true" [spaceBetween]="30" [slidesPerView]="'auto'" [centeredSlides]="true" [effect]="'cards'">
         <ng-template swiperSlide>
             <div class="slide">
-                <img src="../../assets/nclsbayona.png" />
+                <img src="../../assets/welcome.gif" />
                 <h2>Welcome</h2>
                 <p>
                     I built this webpage with <ion-icon name="heart" color="danger"></ion-icon> using Angular and
@@ -40,27 +79,43 @@
                 </p>
             </div>
         </ng-template>
+
+        <ng-template swiperSlide>
+            <div class="slide">
+                <h2>Powerhouse!</h2>
+                <p>
+                    In mobile development at least, I think flutter is just a really cool and powerful way to build
+                    apps.
+                </p>
+                <img src="../../assets/flutter.png" />
+            </div>
+        </ng-template>
+
+        <ng-template swiperSlide>
+            <div class="slide">
+                <img src="../../assets/DevOps.png" />
+                <h2>DevOps</h2>
+                <p>
+                    I'm really passionate about DevOps, and I'm always looking for new ways to improve my skills, but
+                    also new ways to put my skills in practice.
+                </p>
+            </div>
+        </ng-template>
+
+        <ng-template swiperSlide>
+            <div class="slide">
+                <h2>Personal Stuff</h2>
+                <p>
+                    I like helping others in my community communicating my experience and knowledge related to different
+                    topics. I understand that it is not always easy to help someone and sometimes it appears that
+                    nothing changes no matter how hard you try, but I always try to do my best to help others so they
+                    can live a happy life.
+                    Sometimes to help someone, all it takes is hearing them.
+                </p>
+                <img src="../../assets/Dan-Brown-Quote.jpg" />
+            </div>
+        </ng-template>
+
     </swiper>
-    <ion-item-divider color="tertiary" mode="ios">
-        <ion-label>
-            Send me an email...
-        </ion-label>
-    </ion-item-divider>
-    <form action="https://formspree.io/f/xknyewjj" method="POST">
-        <ion-item class="ion-padding">
-            <ion-label position="floating">Enter your full name</ion-label>
-            <ion-input type="text" name="Name"></ion-input>
-        </ion-item>
-        <ion-item class="ion-padding">
-            <ion-label position="floating">Enter your email</ion-label>
-            <ion-input type="text" name="Email"></ion-input>
-        </ion-item>
-        <ion-item class="ion-padding">
-            <ion-label position="floating">Enter your message</ion-label>
-            <ion-textarea name="Message"></ion-textarea>
-        </ion-item>
-        <ion-button class="ion-padding button button-full button-positive" expand="block" type="submit" name="submit"
-            class="btn btn-primary">Send</ion-button>
-    </form>
     <ion-button class="ion-padding" onclick="scrollToTop()" expand="block" fill="outline">Scroll To Top</ion-button>
 </ion-content>

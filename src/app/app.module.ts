@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { TimelineComponent } from './timeline/timeline.component';
     HomeComponent,
     PageNotFoundComponent,
     TimelineComponent,
+    ContactComponent,
   ],
   imports: [
     SwiperModule,
