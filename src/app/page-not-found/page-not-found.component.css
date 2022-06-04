@@ -20,7 +20,7 @@
     height: 15%;
     background-color: #333;
     border-radius: 100%;
-    animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
+    animation: sk-circleFadeDelay 0.5s infinite ease-in-out both;
 }
 
 .sk-fading-circle .sk-circle2 {
@@ -112,7 +112,6 @@
 }
 
 @keyframes sk-circleFadeDelay {
-
     0%,
     39%,
     100% {
