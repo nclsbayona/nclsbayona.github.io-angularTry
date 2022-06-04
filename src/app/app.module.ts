@@ -2,12 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatCardModule } from '@angular/material/card';
 import { IonicModule } from '@ionic/angular';
+import { SwiperModule } from 'swiper/angular';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RecentActivityComponent } from './recent-activity/recent-activity.component';
 import { RecentActivityGithubComponent } from './recent-activity-github/recent-activity-github.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { TimelineComponent } from './timeline/timeline.component';
 
 @NgModule({
   declarations: [
@@ -15,9 +18,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NavbarComponent,
     RecentActivityComponent,
     RecentActivityGithubComponent,
+    HomeComponent,
+    PageNotFoundComponent,
+    TimelineComponent,
   ],
   imports: [
-    MatCardModule,
+    SwiperModule,
     BrowserModule,
     AppRoutingModule,
     IonicModule.forRoot(),

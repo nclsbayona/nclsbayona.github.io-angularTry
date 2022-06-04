@@ -1,13 +1,11 @@
-<ion-toolbar color="dark">
+<ion-toolbar mode="ios" color="dark">
     <ion-buttons slot="secondary">
-        <ion-button>
+        <ion-button [routerLink]="['home']">
             <ion-icon slot="icon-only" name="person-circle"></ion-icon>
         </ion-button>
         <ion-button>
-            <ion-ripple-effect></ion-ripple-effect>
             <ion-icon slot="icon-only" name="search"></ion-icon>
         </ion-button>
-        <ion-button color="light" background="blue" id="side-button">Menu</ion-button>
         <ion-popover [dismissOnSelect]="true" trigger="side-button" side="top" alignment="start">
             <ng-template>
                 <ion-content>

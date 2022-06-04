@@ -10,6 +10,7 @@ export class RecentActivityGithubComponent implements OnInit {
   @ViewChild(IonInfiniteScroll)
   infiniteScroll!: IonInfiniteScroll;
   items: number[];
+  disabled: boolean=false
 
   ngOnInit(): void {
   }
@@ -21,10 +22,6 @@ export class RecentActivityGithubComponent implements OnInit {
       this.addMoreItems();
       event.target.complete();
     }, 400);
-  }
-
-  toggleInfiniteScroll() {
-    this.infiniteScroll.disabled = !this.infiniteScroll.disabled;
   }
 
   constructor() {

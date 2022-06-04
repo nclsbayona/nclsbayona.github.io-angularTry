@@ -1,0 +1,66 @@
+<ion-content class="ion-padding" color="dark" [scrollEvents]="true" (ionScrollStart)="logScrollStart()"
+    (ionScroll)="logScrolling($event)" (ionScrollEnd)="logScrollEnd()">
+    <ion-item-divider color="tertiary" mode="ios">
+        <ion-label>
+            Some facts about me
+        </ion-label>
+    </ion-item-divider>
+    <swiper [spaceBetween]="30" [slidesPerView]="'auto'" [centeredSlides]="true" [effect]="'cards'">
+        <ng-template swiperSlide>
+            <div class="slide">
+                <img src="../../assets/nclsbayona.png" />
+                <h2>Welcome</h2>
+                <p>
+                    I built this webpage with <ion-icon name="heart" color="danger"></ion-icon> using Angular and
+                    Ionic frameworks, as a little showcase for my abilities as a developer.
+                </p>
+            </div>
+        </ng-template>
+
+        <ng-template swiperSlide>
+            <div class="slide ion-padding">
+                <h2>Interests</h2>
+                <p>
+                    I really like <a href="https://docker.com">docker</a> and <a
+                        href="https://kubernetes.io">kubernetes</a>.
+                </p>
+                <img src="../../assets/kube_doc.png" />
+            </div>
+        </ng-template>
+
+        <ng-template swiperSlide>
+            <div class="slide">
+                <img src="../../assets/arsenal.jpg" />
+                <h2>I'm an Arsenal FC fan!</h2>
+                <p>
+                    <ion-icon name="shirt" color="danger"></ion-icon>
+                    <ion-icon name="shirt"></ion-icon>
+                    Lets go Gunners!!!
+                    <ion-icon name="heart" color="danger"></ion-icon>
+                </p>
+            </div>
+        </ng-template>
+    </swiper>
+    <ion-item-divider color="tertiary" mode="ios">
+        <ion-label>
+            Send me an email...
+        </ion-label>
+    </ion-item-divider>
+    <form action="https://formspree.io/f/xknyewjj" method="POST">
+        <ion-item class="ion-padding">
+            <ion-label position="floating">Enter your full name</ion-label>
+            <ion-input type="text" name="Name"></ion-input>
+        </ion-item>
+        <ion-item class="ion-padding">
+            <ion-label position="floating">Enter your email</ion-label>
+            <ion-input type="text" name="Email"></ion-input>
+        </ion-item>
+        <ion-item class="ion-padding">
+            <ion-label position="floating">Enter your message</ion-label>
+            <ion-textarea name="Message"></ion-textarea>
+        </ion-item>
+        <ion-button class="ion-padding button button-full button-positive" expand="block" type="submit" name="submit"
+            class="btn btn-primary">Send</ion-button>
+    </form>
+    <ion-button class="ion-padding" onclick="scrollToTop()" expand="block" fill="outline">Scroll To Top</ion-button>
+</ion-content>

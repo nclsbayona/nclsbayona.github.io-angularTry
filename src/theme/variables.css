@@ -3,4 +3,6 @@
 /* https://ionicframework.com/docs/theming/basics */
 
 /* To quickly generate your own theme, check out the color generator */
-/* https://ionicframework.com/docs/theming/color-generator */
+/* https://ionicframework.com/docs/theming/color-generator
+@import '~swiper/scss';
+@import '~@ionic/angular/css/ionic-swiper';*/
