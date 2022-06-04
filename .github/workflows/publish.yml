@@ -1,16 +1,25 @@
 name: Publish Build
 on:
+  push:
+    branches:
+      - "master"
   workflow_dispatch:
   schedule:
-    - cron: "*/45 * * * *"
+    - cron: "* * */1 * *"
 
 jobs:
   build:
     name: Publish
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.15.1]
     steps:
-        - name: Publish App
-          uses: nclsbayona/deploy-angular_action-@master
-          env:
-            LINK: https://nclsbayona.github.io
-            NAME: nclsbayona.github.io
+        - uses: actions/checkout@v2
+        - name: Build App
+          run: npm install && npm run build && cp dist/nclsbayona.github.io/index.html dist/nclsbayona.github.io/404.html
+        - name: Deploy to GH-Pages
+          uses: JamesIves/github-pages-deploy@4.1.1
+          with:
+            branch: gh-pages
+            folder: dist/nclsbayona.github.io

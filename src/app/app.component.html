@@ -1,6 +1,13 @@
 <ion-header>
   <app-navbar [title]="title"></app-navbar>
 </ion-header>
+<ion-content>
+  <span>Hola</span>
+  <ion-thumbnail slot="start">
+    <ion-img [src]="image"></ion-img>
+  </ion-thumbnail>
+</ion-content>
+
 <router-outlet></router-outlet>
 <!-- fab placed to the top end>
   <ion-fab vertical="top" horizontal="end">
