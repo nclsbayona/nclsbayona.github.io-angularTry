@@ -31,18 +31,6 @@
                 "output": "./svg"
               }
             ],
-            "scripts": [
-              {
-                "input": "node_modules/mustache/mustache.min.js",
-                "inject": true,
-                "bundleName": "mustache"
-              },
-              {
-                "input": "node_modules/github-activity-feed/dist/github-activity.min.js",
-                "inject": true,
-                "bundleName": "github-activity"
-              }
-            ],
             "styles": [
               "src/styles.css",
               {
@@ -77,12 +65,6 @@
               },
               {
                 "input": "src/theme/variables.css"
-              },
-              {
-                "input": "node_modules/octoicons/build/font/octoicons.css"
-              },
-              {
-                "input": "node_modules/github-activity-feed/dist/github-activity.min.css"
               }
             ]
           },

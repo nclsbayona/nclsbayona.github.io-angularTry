@@ -9,10 +9,5 @@ export class RecentActivityGithubComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  constructor() {
-    GitHubActivity.feed({
-      username: "nclsbayona",
-      selector: "#feed"
-    });
-  }
+  constructor() {}
 }

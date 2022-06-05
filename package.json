@@ -20,7 +20,6 @@
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
     "@ionic/angular": "^6.1.8",
-    "github-activity-feed": "^0.3.0",
     "rxjs": "~7.5.0",
     "swiper": "^8.2.2",
     "tslib": "^2.3.0",
