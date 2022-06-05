@@ -31,6 +31,10 @@
                 "output": "./svg"
               }
             ],
+            "scripts":[
+              "node_modules/mustache/mustache.min.js",
+              "node_modules/github-activity-feed/dist/github-activity.min.js"
+            ],
             "styles": [
               "src/styles.css",
               {
@@ -65,6 +69,12 @@
               },
               {
                 "input": "src/theme/variables.css"
+              },
+              {
+                "input": "node_modules/octoicons/build/font/octoicons.css"
+              },
+              {
+                "input": "node_modules/github-activity-feed/dist/github-activity.min.css"
               }
             ]
           },
