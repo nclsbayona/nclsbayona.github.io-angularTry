@@ -31,9 +31,17 @@
                 "output": "./svg"
               }
             ],
-            "scripts":[
-              "node_modules/mustache/mustache.min.js",
-              "node_modules/github-activity-feed/dist/github-activity.min.js"
+            "scripts": [
+              {
+                "input": "node_modules/mustache/mustache.min.js",
+                "inject": true,
+                "bundleName": "mustache"
+              },
+              {
+                "input": "node_modules/github-activity-feed/dist/github-activity.min.js",
+                "inject": true,
+                "bundleName": "github-activity"
+              }
             ],
             "styles": [
               "src/styles.css",
