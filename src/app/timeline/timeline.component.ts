@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { Ievent } from '../interfaces/Ievent';
-import { TimelineService } from '../timeline.service';
+import { TimelineService } from '../services/timeline/timeline.service';
 
 @Component({
   selector: 'app-timeline',
