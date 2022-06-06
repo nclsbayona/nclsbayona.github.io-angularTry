@@ -1,17 +1,12 @@
 <ion-toolbar mode="ios" color="dark">
     <ion-buttons slot="secondary">
-        <a href="">
-            <img src="../../assets/favicon/apple-touch-icon.png" width="20px" />
-        </a>
-        <ion-button [routerLink]="['home']">
-            <ion-icon slot="icon-only" name="person-circle"></ion-icon>
-        </ion-button>
-        <ion-button>
-            <ion-icon slot="icon-only" name="search"></ion-icon>
-        </ion-button>
+
         <ion-button id="trigger-menu">
             <ion-icon slot="icon-only" name="menu"></ion-icon>
         </ion-button>
+        <a [routerLink]="['home']">
+            <img src="../../assets/favicon/apple-touch-icon.png" width="20px" />
+        </a>
         <ion-popover [dismissOnSelect]="true" trigger="trigger-menu" side="top" alignment="start">
             <ng-template>
                 <ion-content>
