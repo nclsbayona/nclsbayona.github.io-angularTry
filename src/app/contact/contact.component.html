@@ -90,9 +90,8 @@
             <ion-label position="floating">Enter your message</ion-label>
             <ion-textarea required name="Message"></ion-textarea>
         </ion-item>
-        <div class="g-recaptcha" data-sitekey="6LduAEUgAAAAAG8c_8fPelv4DmhiVAU-nOqtLgI6">
-        </div>
-        <ion-button id="submit" class="ion-padding button button-full button-positive" shape="round" expand="block"
+        <re-captcha (resolved)="checkCaptcha($event)" name="recaptchaReactive" ngModel siteKey="6LduAEUgAAAAAG8c_8fPelv4DmhiVAU-nOqtLgI6"></re-captcha>
+        <ion-button [disabled]="!getResolved()" id="submit" class="ion-padding button button-full button-positive" shape="round" expand="block"
             type="submit" name="submit">
             Send
         </ion-button>

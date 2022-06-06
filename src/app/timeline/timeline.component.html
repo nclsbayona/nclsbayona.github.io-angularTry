@@ -1,3 +1,25 @@
 <ion-content class="ion-padding ion-align-items-center" color="dark">
-    <!--Timeline: https://www.youtube.com/watch?v=7RfP6rTxsNs-->    
+    <ion-list lines="inset" inset color="dark" class="timeline">
+        <ion-list-header>
+            <ion-label>
+                <ion-text color="light">
+                    <h1>Timeline</h1>
+                </ion-text>
+            </ion-label>
+        </ion-list-header>
+        <ion-item *ngFor="let item of items" color="dark" class="timeline-event">
+            <ion-label>
+                <ion-text color="light">
+                    <h2>{{item.title}}</h2>
+                    <h3>{{item.date}}</h3>
+                </ion-text>
+            </ion-label>
+            <ion-label>
+                <ion-text color="light">
+                    <p>{{item.description}}</p>
+                </ion-text>
+            </ion-label>
+            <ion-icon name="rocket" slot="end" color="light"></ion-icon>
+        </ion-item>
+    </ion-list>
 </ion-content>
