@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { ContactComponent } from './contact/contact.component';
+import { RecentActivityTwitterComponent } from './recent-activity-twitter/recent-activity-twitter.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ContactComponent } from './contact/contact.component';
     PageNotFoundComponent,
     TimelineComponent,
     ContactComponent,
+    RecentActivityTwitterComponent,
   ],
   imports: [
     SwiperModule,
