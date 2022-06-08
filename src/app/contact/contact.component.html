@@ -1,4 +1,4 @@
-<ion-content color="dark" class="ion-padding">
+<ion-content color="dark" class="ion-padding ion-justify-content-center ion-align-items-center">
     <h2>
         Reach me on
     </h2>
@@ -90,7 +90,7 @@
             <ion-label position="floating">Enter your message</ion-label>
             <ion-textarea required name="Message"></ion-textarea>
         </ion-item>
-        <re-captcha (resolved)="checkCaptcha($event)" name="recaptchaReactive" ngModel siteKey="6LduAEUgAAAAAG8c_8fPelv4DmhiVAU-nOqtLgI6"></re-captcha>
+        <re-captcha class="ion-padding" (resolved)="checkCaptcha($event)" name="recaptchaReactive" ngModel siteKey="6LduAEUgAAAAAG8c_8fPelv4DmhiVAU-nOqtLgI6"></re-captcha>
         <ion-button [disabled]="!getResolved()" id="submit" class="ion-padding button button-full button-positive" shape="round" expand="block"
             type="submit" name="submit">
             Send
