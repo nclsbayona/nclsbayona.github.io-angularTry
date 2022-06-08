@@ -7,6 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecentActivityTwitterComponent implements OnInit {
 
+  options = {
+    tweetLimit: 10,
+    color: '#FFFFFF',
+    theme: 'dark'
+  }
+
+  data={
+    sourceType: 'profile',
+    url: 'https://twitter.com/nclsbayona',
+  }
+
   constructor() { }
 
   ngOnInit(): void {

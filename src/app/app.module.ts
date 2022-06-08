@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
 import { AppComponent } from './app.component';
 import { IonicModule } from '@ionic/angular';
 import { SwiperModule } from 'swiper/angular';
@@ -36,7 +37,8 @@ import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
     BrowserAnimationsModule,
     HttpClientModule, 
     RecaptchaFormsModule, 
-    RecaptchaModule
+    RecaptchaModule, 
+    NgxTwitterTimelineModule
   ],
   providers: [],
   bootstrap: [AppComponent]
