@@ -6,35 +6,23 @@
                 <img src="{{item.image}}">
             </ion-avatar>
             <ion-label>
-                <h3>item.title</h3>
-                <p>item.date</p>
+                <h3>{{item.title}}</h3>
+                <p>{{item.date}}</p>
             </ion-label>
         </ion-item>
         <ion-card-header>
-            <ion-card-title>Hotel Panama Garden</ion-card-title>
+            <ion-card-title>{{item.subtitle}}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus iaculis mollis ligula sed ultrices.
+            {{item.description}}
         </ion-card-content>
         <ion-footer>
             <ion-row>
-                <ion-col center text-center>
-                    <button>
-                        <ion-icon name="thumbs-up"></ion-icon>
-                        <div>1.5k Likes</div>
-                    </button>
-                </ion-col>
-                <ion-col center text-center>
-                    <button>
-                        <ion-icon name="text"></ion-icon>
-                        <div>4 Comments</div>
-                    </button>
-                </ion-col>
-                <ion-col center text-center>
-                    <button>
-                        <ion-icon name="time"></ion-icon>
-                        <div>11h ago</div>
-                    </button>
+                <ion-col center text-center *ngFor="let label of item.labels">
+                    <ion-chip>
+                        <ion-icon name="heart" color="dark"></ion-icon>
+                        <ion-label>{{label}}</ion-label>
+                    </ion-chip>
                 </ion-col>
             </ion-row>
         </ion-footer>
