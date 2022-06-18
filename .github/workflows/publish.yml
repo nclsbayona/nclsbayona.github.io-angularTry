@@ -1,11 +1,12 @@
 name: Publish Build
 on:
+  repository_dispatch:
   push:
     branches:
       - "master"
   workflow_dispatch:
   schedule:
-    - cron: "1 1 1 1 1"
+    - cron: "0 12 1 1 *"
 
 jobs:
   build:
