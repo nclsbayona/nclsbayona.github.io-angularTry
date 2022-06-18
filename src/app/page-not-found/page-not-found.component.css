@@ -142,7 +142,7 @@ h1{
     text-align: center;
     text-decoration: dashed;
     text-shadow: red -2px 0,
-                cyan -2px 0;
+                cyan 2px 0;
 }
 
 h2{
