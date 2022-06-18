@@ -16,7 +16,6 @@ export class TimelineComponent implements OnInit {
 
   ngOnInit(): void {
     this.timelineService.getTimeline().subscribe(data => {
-      console.log(data)
       data.forEach(element => {
         this.items.push(element)
         this.cd.markForCheck();
