@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-navbar',
@@ -8,20 +7,10 @@ import { MenuController } from '@ionic/angular';
 })
 export class NavbarComponent implements OnInit {
 
+  resume: string='https://nclsbayona.github.io/ResumePage/';
   @Input()
   title!: string;
 
-  isPopoverOpen: boolean;
-
-  constructor(private controller: MenuController) {
-    this.isPopoverOpen = false;
-  }
-
   ngOnInit(): void {
   }
-
-  async openMenu(){
-    await this.controller.open();
-  }
-
 }
