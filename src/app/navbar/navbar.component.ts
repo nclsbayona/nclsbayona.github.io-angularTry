@@ -8,8 +8,6 @@ import { Component, Input, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   resume: string='https://nclsbayona.github.io/ResumePage/';
-  @Input()
-  title!: string;
 
   ngOnInit(): void {
   }
