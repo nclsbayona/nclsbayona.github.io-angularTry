@@ -22,4 +22,5 @@ export class TimelineComponent implements OnInit {
       })
     })
   }
+  scrollToTop() { document.querySelector('ion-content')?.scrollToTop(500) }
 }
