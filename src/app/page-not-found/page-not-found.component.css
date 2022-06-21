@@ -136,19 +136,24 @@
 }
 
 h1{
-    color: rgb(221, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 4rem;
     font-weight: bold;
     text-align: center;
     text-decoration: dashed;
+    text-shadow: red -2px 0,
+                cyan 2px 0;
 }
 
 h2{
+    -webkit-text-stroke: 1px #000000;
+    -webkit-font-smoothing: antialiased;
     color: rgb(124, 33, 33);
+    text-shadow: #333;
+    text-decoration: dotted;
     font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
-    text-decoration: wavy;
 }
 
 h3{

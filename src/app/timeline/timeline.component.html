@@ -1,26 +1,30 @@
 <ion-content class="ion-padding ion-align-items-center" color="dark">
-    <ion-list lines="inset" inset color="dark" class="timeline">
-        <ion-list-header color="dark">
-            <ion-label color="dark">
-                <ion-text color="light">
-                    <h1>Timeline</h1>
-                </ion-text>
+    <h1>Timeline</h1>
+    <ion-card *ngFor="let item of items" color="dark">
+        <ion-item>
+            <ion-avatar slot="start">
+                <img src="{{item.image}}">
+            </ion-avatar>
+            <ion-label>
+                <h3>{{item.title}}</h3>
+                <p>{{item.date}}</p>
             </ion-label>
-        </ion-list-header>
-        <ion-item *ngFor="let item of items" color="dark" class="timeline-event">
-            <ion-label color="dark">
-                <ion-text color="light">
-                    <h2>{{item.title}}</h2>
-                    <h3>{{item.date}}</h3>
-                </ion-text>
-            </ion-label>
-            <ion-label color="dark">
-                <ion-text color="light">
-                    <p>{{item.description}}</p>
-                </ion-text>
-            </ion-label>
-            <ion-icon name="rocket" slot="end" color="light"></ion-icon>
         </ion-item>
-    </ion-list>
-    <ion-button class="ion-padding" onclick="scrollToTop()" expand="block" fill="outline">Scroll To Top</ion-button>
+        <ion-card-header>
+            <ion-card-title>{{item.subtitle}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            {{item.description}}
+        </ion-card-content>
+        <ion-footer>
+            <ion-row>
+                <ion-col center text-center *ngFor="let label of item.labels">
+                    <ion-chip color="{{label.color}}">
+                        <ion-icon name="{{label.icon}}" color="{{label.iconcolor}}"></ion-icon>
+                        <ion-label>{{label.title}}</ion-label>
+                    </ion-chip>
+                </ion-col>
+            </ion-row>
+        </ion-footer>
+    </ion-card>
 </ion-content>

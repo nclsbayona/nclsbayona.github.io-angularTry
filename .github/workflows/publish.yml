@@ -1,11 +1,12 @@
 name: Publish Build
 on:
+  repository_dispatch:
   push:
     branches:
       - "master"
   workflow_dispatch:
   schedule:
-    - cron: "0 12 * * *"
+    - cron: "0 12 1 1 *"
 
 jobs:
   build:
@@ -26,9 +27,9 @@ jobs:
             path: node_modules
             key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
             restore-keys: |
-          ${{ runner.os }}-build-${{ env.cache-name }}-
-          ${{ runner.os }}-build-
-          ${{ runner.os }}-
+              ${{ runner.os }}-build-${{ env.cache-name }}-
+              ${{ runner.os }}-build-
+              ${{ runner.os }}-
         - name: Install Dependencies
           if: steps.cache-nodemodules.outputs.cache-hit != 'true'
           run: npm ci
