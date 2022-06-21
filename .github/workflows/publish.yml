@@ -46,5 +46,3 @@ jobs:
             branch: gh-pages
             folder: dist/nclsbayona.github.io
             commit-message: 🚀 Deploying webpage ... 
-            clean: false
-            force: false
