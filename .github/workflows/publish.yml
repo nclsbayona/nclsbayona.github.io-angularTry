@@ -3,7 +3,11 @@ on:
   repository_dispatch:
   push:
     branches:
-      - "master"
+      - master
+    paths:
+      - src/**
+      - package.json
+      - angular.json
   workflow_dispatch:
   schedule:
     - cron: "0 12 1 1 *"
@@ -39,7 +43,7 @@ jobs:
           if: steps.cache-nodemodules.outputs.cache-hit != 'true'
           run: npm ci
         - name: Build App
-          run: npm run build --configuration=production && cp dist/nclsbayona.github.io/index.html dist/nclsbayona.github.io/404.html
+          run: npm run ci:build && cp dist/nclsbayona.github.io/index.html dist/nclsbayona.github.io/404.html
         - name: Deploy to GH-Pages
           uses: JamesIves/github-pages-deploy-action@v4.3.3
           with:
