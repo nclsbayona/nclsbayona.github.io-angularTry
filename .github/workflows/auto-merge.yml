@@ -1,6 +1,7 @@
 name: auto-merge
 
 on:
+  pull_request:
   workflow_run:
     workflows: ["Publish Possible"]
     types: 
