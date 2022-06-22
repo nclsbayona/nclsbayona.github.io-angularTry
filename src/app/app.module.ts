@@ -16,6 +16,7 @@ import { TimelineComponent } from './timeline/timeline.component';
 import { ContactComponent } from './contact/contact.component';
 import { RecentActivityTwitterComponent } from './recent-activity-twitter/recent-activity-twitter.component';
 import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
+import { ResumeComponent } from './resume/resume.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
     PageNotFoundComponent,
     TimelineComponent,
     ContactComponent,
-    RecentActivityTwitterComponent
+    RecentActivityTwitterComponent,
+    ResumeComponent
   ],
   imports: [
     SwiperModule,

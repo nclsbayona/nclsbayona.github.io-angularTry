@@ -6,6 +6,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { RecentActivityGithubComponent } from './recent-activity-github/recent-activity-github.component';
 import { RecentActivityTwitterComponent } from './recent-activity-twitter/recent-activity-twitter.component';
 import { RecentActivityComponent } from './recent-activity/recent-activity.component';
+import { ResumeComponent } from './resume/resume.component';
 import { TimelineComponent } from './timeline/timeline.component';
 
 const routes: Routes = [
@@ -31,8 +32,11 @@ const routes: Routes = [
     path: '', redirectTo: '/home', pathMatch: 'full'
   },
   {
-    title: 'Oops!', path: '**', component: PageNotFoundComponent
+    title: 'My Resume ...', path: "resume" ,component: ResumeComponent
   },
+  {
+    title: 'Oops!', path: '**', component: PageNotFoundComponent
+  }
 ];
 
 @NgModule({

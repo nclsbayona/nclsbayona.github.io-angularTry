@@ -23,7 +23,7 @@
                         </ion-item>
 
                         <ion-item [button]="true" [detail]="true">
-                            <ion-label><a href="{{resume}}"><ion-text color="dark">My resume ...</ion-text></a></ion-label>
+                            <ion-label [routerLink]="['resume']"><ion-text color="dark">My resume ...</ion-text></ion-label>
                         </ion-item>
 
                         <ion-popover trigger="nested-trigger" [dismissOnSelect]="true" side="start">
