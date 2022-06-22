@@ -32,7 +32,7 @@ jobs:
           run: npm run ci:build && cp dist/nclsbayona.github.io/index.html dist/nclsbayona.github.io/404.html
 
   auto-merge:
-  
+    name: Auto-merge dependabot pull request
     if: ${{ !(failure() || cancelled()) }}
     
     needs: 
