@@ -41,7 +41,7 @@ jobs:
               ${{ runner.os }}-
         - name: Install Dependencies
           if: steps.cache-nodemodules.outputs.cache-hit != 'true'
-          run: npm ci
+          run: npm ci --force
         - name: Build App
           run: npm run ci:build && cp dist/nclsbayona.github.io/index.html dist/nclsbayona.github.io/404.html
         - name: Deploy to GH-Pages
