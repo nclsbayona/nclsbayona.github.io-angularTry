@@ -30,3 +30,19 @@ jobs:
           run: npm ci --force
         - name: Build App
           run: npm run ci:build && cp dist/nclsbayona.github.io/index.html dist/nclsbayona.github.io/404.html
+
+  auto-merge:
+  
+    if: ${{ !(failure() || cancelled()) }}
+    
+    needs: 
+     - build
+     
+    runs-on: ubuntu-latest
+     
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ahmadnassri/action-dependabot-auto-merge@v2
+        with:
+          target: minor
+          github-token: ${{ secrets.TOKEN }}
