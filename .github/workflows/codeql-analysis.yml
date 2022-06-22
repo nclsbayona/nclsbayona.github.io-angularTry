@@ -14,12 +14,20 @@ name: "CodeQL"
 on:
   push:
     branches: [ "master" ]
+    paths:
+     - 'src/**'
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ "master" ]
+    paths:
+     - 'src/**'
   schedule:
     - cron: '16 22 * * 2'
 
+concurrency:
+  group: build-${{ github.event.push.number || github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+  
 jobs:
   analyze:
     name: Analyze
