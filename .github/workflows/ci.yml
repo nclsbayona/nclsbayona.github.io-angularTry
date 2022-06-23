@@ -42,7 +42,7 @@ jobs:
      
     steps:
       - uses: actions/checkout@v3
-      - name: Merge
-        uses: ahmadnassri/action-dependabot-auto-merge@v2
+      - name: Auto-Merge
+        uses: ahmadnassri/action-dependabot-auto-merge@v2.6.0
         with:
           github-token: ${{ secrets.TOKEN }}
