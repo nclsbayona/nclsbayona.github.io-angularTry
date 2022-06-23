@@ -12,7 +12,9 @@ export class ResumeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  scrollToTop() { document.querySelector('ion-content')?.scrollToTop(500) }
+  scrollToTop() {
+    document.querySelector('ion-content')?.scrollToTop(500)
+  }
 
   downloadPDF() {
     alert("File in generated/resume.pdf")
