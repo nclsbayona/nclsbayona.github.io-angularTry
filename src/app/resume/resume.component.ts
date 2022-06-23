@@ -1,4 +1,6 @@
+import { FileSaverService } from 'ngx-filesaver';
 import { Component, OnInit } from '@angular/core';
+import { DownloadService } from '../services/download/download.service';
 
 @Component({
   selector: 'app-resume',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResumeComponent implements OnInit {
 
-  constructor() { }
+  pdf: string = "https://nclsbayona.github.io/MyResume/generated/resume.pdf"
+  md: string = "https://nclsbayona.github.io/MyResume/markdown/resume.md"
+  docx: string = "https://nclsbayona.github.io/MyResume/generated/resume.docx"
+  html: string = "https://nclsbayona.github.io/MyResume/generated/resume.html"
+  tex: string = "https://nclsbayona.github.io/MyResume/generated/resume.tex"
+
+  constructor(private downloads: DownloadService, private fileSaverService: FileSaverService) { }
 
   ngOnInit(): void {
   }
@@ -17,22 +25,52 @@ export class ResumeComponent implements OnInit {
   }
 
   downloadPDF() {
-    alert("File in generated/resume.pdf")
+    try {
+      this.downloads.download(this.pdf).subscribe(blob => {
+        this.fileSaverService.save(blob, "resume.pdf");
+      });
+    } catch (e) {
+      alert('Saving failed :C');
+    }
   }
 
   downloadMD() {
-    alert("File in markdown/resume.md")
+    try {
+      this.downloads.download(this.md).subscribe(blob => {
+        this.fileSaverService.save(blob, "resume.md");
+      });
+    } catch (e) {
+      alert('Saving failed :C');
+    }
   }
 
   downloadHTML() {
-    alert("File in generated/resume.html")
+    try {
+      this.downloads.download(this.html).subscribe(blob => {
+        this.fileSaverService.save(blob, "resume.html");
+      });
+    } catch (e) {
+      alert('Saving failed :C');
+    }
   }
 
   downloadTEX() {
-    alert("File in generated/resume.tex")
+    try {
+      this.downloads.download(this.tex).subscribe(blob => {
+        this.fileSaverService.save(blob, "resume.tex");
+      });
+    } catch (e) {
+      alert('Saving failed :C');
+    }
   }
 
   downloadDOCX() {
-    alert("File in generated/resume.docx")
+    try {
+      this.downloads.download(this.docx).subscribe(blob => {
+        this.fileSaverService.save(blob, "resume.docx");
+      });
+    } catch (e) {
+      alert('Saving failed :C');
+    }
   }
 }

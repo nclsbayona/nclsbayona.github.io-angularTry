@@ -2,11 +2,10 @@
     <h1>
         Resume
     </h1>
-    <h3>
-        This resume part is being rendered from markdown to multiple formats such as pdf and docx. If you want to check out the repository where I'm storing all this, you can go and <a href="https://github.com/nclsbayona/MyResume">check this</a>.
-    </h3>
-    <!--Display here https://vadimdez.medium.com/render-pdf-in-angular-4-927e31da9c76 -->
-    <pdf-viewer src="https://nclsbayona.github.io/MyResume/generated/resume.pdf" [original-size]="false" style="height = 50%; width=100%;"></pdf-viewer>
+    <h5>
+        This resume part is being rendered from markdown to multiple formats such as pdf and docx. If you want to check out the repository where I'm storing all this, you can go and <a href="https://github.com/nclsbayona/MyResume">check it out</a>.
+    </h5>
+    <pdf-viewer src="https://nclsbayona.github.io/MyResume/generated/resume.pdf" [original-size]="false" style="height: 90%; width: 100%;"></pdf-viewer>
     <ion-row class="ion-padding">
         <ion-col>
             <ion-button class="ion-padding" (click)="downloadPDF()">Download PDF</ion-button>
