@@ -13,7 +13,24 @@ export class ResumeComponent implements OnInit {
   }
 
   scrollToTop() { document.querySelector('ion-content')?.scrollToTop(500) }
-  
-  downloadPDF(){}
-  downloadMD(){}
+
+  downloadPDF() {
+    alert("File in generated/resume.pdf")
+  }
+
+  downloadMD() {
+    alert("File in markdown/resume.md")
+  }
+
+  downloadHTML() {
+    alert("File in generated/resume.html")
+  }
+
+  downloadTEX() {
+    alert("File in generated/resume.tex")
+  }
+
+  downloadDOCX() {
+    alert("File in generated/resume.docx")
+  }
 }
