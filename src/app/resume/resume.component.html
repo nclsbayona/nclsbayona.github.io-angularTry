@@ -5,7 +5,8 @@
     <h3>
         This resume part is being rendered from markdown to multiple formats such as pdf and docx. If you want to check out the repository where I'm storing all this, you can go and [check this](https://github.com/nclsbayona/MyResume).
     </h3>
-    <!--Display here-->
+    <!--Display here https://vadimdez.medium.com/render-pdf-in-angular-4-927e31da9c76-->
+    <pdf-viewer src="https://nclsbayona.github.io/MyResume/generated/resume.pdf" [original-size]="true"></pdf-viewer>
     <ion-row class="ion-padding">
         <ion-col>
             <ion-button class="ion-padding" onclick="downloadPDF()">Download PDF</ion-button>
@@ -23,6 +24,6 @@
             <ion-button class="ion-padding" onclick="downloadHTML()">Download HTML</ion-button>
         </ion-col>
     </ion-row>
-    
+
     <ion-button class="ion-padding" onclick="scrollToTop()" expand="block" fill="outline">Scroll To Top</ion-button>
 </ion-content>

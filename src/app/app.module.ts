@@ -16,6 +16,7 @@ import { TimelineComponent } from './timeline/timeline.component';
 import { ContactComponent } from './contact/contact.component';
 import { RecentActivityTwitterComponent } from './recent-activity-twitter/recent-activity-twitter.component';
 import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { ResumeComponent } from './resume/resume.component';
 
 @NgModule({
@@ -39,7 +40,8 @@ import { ResumeComponent } from './resume/resume.component';
     BrowserAnimationsModule,
     HttpClientModule, 
     RecaptchaFormsModule, 
-    RecaptchaModule, 
+    RecaptchaModule,
+    PdfViewerModule,
     NgxTwitterTimelineModule
   ],
   providers: [],
