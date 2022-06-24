@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.0.0",
-    "@angular/cli": "~14.0.0",
+    "@angular/cli": "~14.0.3",
     "@angular/compiler-cli": "^14.0.3",
     "@ionic/angular-toolkit": "latest",
     "@types/jasmine": "~4.0.0",
