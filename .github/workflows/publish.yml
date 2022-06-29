@@ -45,7 +45,7 @@ jobs:
         - name: Build App
           run: npm run ci:build && cp dist/nclsbayona.github.io/index.html dist/nclsbayona.github.io/404.html
         - name: Deploy to GH-Pages
-          uses: JamesIves/github-pages-deploy-action@v4.3.3
+          uses: JamesIves/github-pages-deploy-action@v4.3.4
           with:
             branch: gh-pages
             folder: dist/nclsbayona.github.io
