@@ -27,7 +27,7 @@
     "ngx-filesaver": "^13.0.0",
     "ngx-twitter-timeline": "^0.1.5",
     "rxjs": "~7.5.0",
-    "swiper": "^8.2.5",
+    "swiper": "^8.2.6",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
