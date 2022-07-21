@@ -17,7 +17,7 @@
     "@angular/core": "^14.0.6",
     "@angular/forms": "^14.0.6",
     "@angular/platform-browser": "^14.0.5",
-    "@angular/platform-browser-dynamic": "^14.0.6",
+    "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.0.6",
     "@ionic/angular": "^6.1.14",
     "@types/file-saver": "^2.0.5",
